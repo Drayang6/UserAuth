@@ -24,7 +24,7 @@ app.use(session({
 
 // View engine
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+app.set('view', path.join(__dirname, 'view'));
 
 
 const adminRoutes = require('./routes/adminRoutes');
