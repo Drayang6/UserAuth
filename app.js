@@ -34,6 +34,10 @@ app.use('/', authRoutes);
 app.use('/admin', adminRoutes);
 app.use('/user', userRoutes);
 
+// root route
+app.get('/', (req, res) => {
+  res.render('pages/landing');
+});
 
 const { createFoodTable } = require('./models/foodModel');
 createFoodTable();
