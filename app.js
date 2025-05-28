@@ -24,7 +24,7 @@ app.use(session({
 
 // View engine
 app.set('view engine', 'ejs');
-app.set('view', path.join(__dirname, 'view'));
+app.set('views', path.join(__dirname, 'views'));
 
 
 const adminRoutes = require('./routes/adminRoutes');
@@ -34,10 +34,6 @@ app.use('/', authRoutes);
 app.use('/admin', adminRoutes);
 app.use('/user', userRoutes);
 
-// root route
-app.get('/', (req, res) => {
-  res.render('pages/landing');
-});
 
 const { createFoodTable } = require('./models/foodModel');
 createFoodTable();
