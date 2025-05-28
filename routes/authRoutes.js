@@ -5,7 +5,7 @@ const authController = require('../controller/authController');
 
 // root route
 router.get('/', (req, res) => {
-  res.render('pages/landing');
+  res.render('/pages/landing');
 });
 
 
