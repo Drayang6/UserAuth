@@ -4,7 +4,7 @@ const { isAdmin } = require('../middleware/authMiddleware');
 const adminController = require('../controller/adminController');
 
 
-router.get('/dashboard', isAdmin, adminController.getDashboard);
+router.get('/admin/dashboard', isAdmin, adminController.getDashboard);
 
 
 router.get('/add-food',isAdmin, adminController.getAddFood);

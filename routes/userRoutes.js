@@ -4,10 +4,10 @@ const { isAuthenticated } = require('../middleware/authMiddleware');
 const userController = require('../controller/userController');
 
 
-router.get('/dashboard', isAuthenticated, userController.getDashboard);
+router.get('/user/dashboard', isAuthenticated, userController.getDashboard);
 
 
-router.get('/foods',isAuthenticated, userController.getAllFoods);
+router.get('/user/foods',isAuthenticated, userController.getAllFoods);
 
 
 module.exports = router;
